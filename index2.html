@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Singh Firm – Trusted Legal Services</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --dark-bg: #111;
+      --gold-accent: #BFA669;
+      --light-text: #EEE;
+    }
+    body {
+      background-color: #f8f9fa;
+      font-family: Arial, sans-serif;
+    }
+    h1, h2, h3 {
+      font-family: Georgia, serif;
+    }
+    .bg-navy {
+      background-color: var(--dark-bg) !important;
+    }
+    .text-navy {
+      color: var(--dark-bg);
+    }
+    .card {
+      border: none;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .top-bar {
+      background: var(--dark-bg);
+      color: var(--light-text);
+      font-size: 0.9rem;
+    }
+    .top-bar a {
+      color: var(--light-text);
+      text-decoration: none;
+      margin-left: 1rem;
+    }
+    .top-bar a:hover {
+      color: var(--gold-accent);
+    }
+    .navbar-dark .navbar-nav .nav-link {
+      color: var(--light-text);
+    }
+    .navbar-dark .navbar-nav .nav-link:hover {
+      color: var(--gold-accent);
+    }
+    .navbar-dark .navbar-brand {
+      color: var(--gold-accent) !important;
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 700;
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+    .btn-appointment {
+      background: var(--gold-accent);
+      color: var(--dark-bg);
+      font-weight: 600;
+      border-radius: 0;
+    }
+    .btn-appointment:hover {
+      background: #a29050;
+      color: var(--light-text);
+    }
+    .hero-section {
+      position: relative;
+      background: url('build.jpg') center/cover no-repeat;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .hero-section::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+    }
+    .hero-section .container {
+      position: relative;
+      z-index: 1;
+    }
+    .text-yellow {
+      color: #FFC107 !important;
+    }
+    .btn-warning {
+      background-color: #FFC107;
+      border-color: #FFC107;
+      color: #212529;
+    }
+    .btn-warning:hover {
+      background-color: #e0a800;
+      border-color: #d39e00;
+    }
+    .nav-link.nav-booking {
+      color: var(--gold-accent) !important;
+    }
+    .nav-link.nav-booking:hover {
+      color: #e0a800 !important;
+    }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+      background-color: white;
+      border-radius: 50%;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      padding: 5px;
+      transition: transform 0.2s ease;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-bar py-2 text-center">
+    <small>
+      <span>🕒 8:00–15:00 Mon–Fri</span>
+      <a href="tel:+919472057019">📞 +919472057019</a>
+      <a href="https://www.linkedin.com/in/ashutosh-singh-541649190/" target="_blank">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </small>
+  </div>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-navy">
+    <div class="container d-flex align-items-center">
+      <a class="d-flex align-items-center text-decoration-none" href="#">
+        <img src="0ec7782316294f9fb52e62fae951c030.png" alt="Logo"
+             style="height:50px; width:auto; margin-right:0.75rem; object-fit:contain;">
+        <span class="navbar-brand mb-0">Singh Firm</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarNav" aria-controls="navbarNav"
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item ms-lg-3">
+            <a class="btn btn-appointment" href="#booking">Get Appointment</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero-section">
+    <div class="container text-center">
+      <h1 class="display-5 fw-bold text-yellow">Your Trusted Legal Advisors</h1>
+      <p class="lead text-yellow">At Singh Firm, we deliver justice with integrity and expertise.</p>
+      <img src="ASHUPHOTO.jpeg" alt="Ashutosh Singh"
+           class="mx-auto d-block mt-4"
+           style="width:180px; height:180px; object-fit:cover; border-radius:8px;">
+      <h3 class="mt-3 text-yellow">Ashutosh Singh</h3>
+      <p class="text-yellow mb-1">
+        Chanakya Law National University, Patna | 1 year experience
+      </p>
+      <a href="https://www.linkedin.com/in/ashutosh-singh-541649190/" target="_blank"
+         class="text-yellow text-decoration-none">
+        <i class="fab fa-linkedin fa-lg"></i> Connect on LinkedIn
+      </a>
+    </div>
+  </section>
+
+  <section id="about" class="py-5 bg-white">
+    <div class="container">
+      <h2 class="text-center mb-4 text-navy">About Us</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-10">
+          <p class="lead text-center">
+            Singh Firm is committed to making legal support accessible, transparent, and trustworthy.
+            Founded by Ashutosh Singh, an alumnus of Chanakya Law National University, we specialize in document review,
+            consultations, and case preparation at affordable rates.
+          </p>
+          <p class="text-center">
+            With a growing client base and a passion for justice, our goal is to bridge the legal literacy gap
+            and empower clients through professional yet friendly legal guidance.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4 text-navy">Our Services</h2>
+      <div class="row">
+        <div class="col-md-4 text-center mb-4">
+          <i class="fas fa-file-alt fa-2x text-navy mb-2"></i>
+          <h5>Document Review</h5>
+          <p>Thorough analysis of your legal documents. <strong>₹1,500</strong></p>
+        </div>
+        <div class="col-md-4 text-center mb-4">
+          <i class="fas fa-comments fa-2x text-navy mb-2"></i>
+          <h5>Basic Consultations</h5>
+          <p>Discuss your legal issue with our team. <strong>₹800</strong></p>
+        </div>
+        <div class="col-md-4 text-center mb-4">
+          <i class="fas fa-clipboard-check fa-2x text-navy mb-2"></i>
+          <h5>Simple Case Preparation</h5>
+          <p>Assistance preparing simple legal cases. <strong>₹2,500</strong></p>
+        </div>
+      </div>
+      <p class="text-center font-italic text-muted mt-4">
+        You only pay once you’re satisfied — our priority is to ensure your legal work is properly delivered.
+      </p>
+    </div>
+  </section>
+
+  <section id="testimonials" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4 text-navy">Testimonials</h2>
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <div class="card p-3">
+            <p class="card-text">
+              “Singh Firm guided me through a complex legal process with professionalism and achieved an excellent outcome.”
+            </p>
+            <h6 class="text-end mb-0">— Rajesh Sharma, Pune</h6>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="card p-3">
+            <p class="card-text">
+              “Helpful but took a bit longer than I expected. Still, I got the result I needed.”
+            </p>
+            <h6 class="text-end mb-0">— Anita Pillai, Mumbai</h6>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="card p-3">
+            <p class="card-text">
+              “Great value for the price. I appreciated their clarity and honesty.”
+            </p>
+            <h6 class="text-end mb-0">— Imran Qureshi, Hyderabad</h6>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="card p-3">
+            <p class="card-text">
+              “Not bad. Some communication gaps, but the work was completed on time.”
+            </p>
+            <h6 class="text-end mb-0">— Meenal Desai, Ahmedabad</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="booking" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4 text-navy">Book a Consultation</h2>
+      <form
+        action="mailto:ashutosh123459295@gmail.com"
+        method="POST"
+        enctype="text/plain"
+        class="row g-3 justify-content-center"
+      >
+        <div class="col-md-4">
+          <input
+            type="text"
+            name="Name"
+            class="form-control"
+            placeholder="Your Name"
+            required
+          >
+        </div>
+        <div class="col-md-4">
+          <input
+            type="email"
+            name="Email"
+            class="form-control"
+            placeholder="Your Email"
+            required
+          >
+        </div>
+        <div class="col-md-4">
+          <input
+            type="tel"
+            name="Phone"
+            class="form-control"
+            placeholder="Phone Number"
+            required
+          >
+        </div>
+        <div class="col-12 text-center">
+          <button type="submit" class="btn btn-warning mt-3">Submit</button>
+        </div>
+      </form>
+    </div>
+  </section>
+  
+
+  <section id="contact" class="py-5">
+    <div class="container text-center">
+      <h2 class="mb-4 text-navy">Contact Us</h2>
+      <p>
+        <a href="https://wa.me/6204861961" class="text-decoration-none" target="_blank">
+          <img src="whatsapp-icon.png" alt="WhatsApp"
+               style="height:20px; width:20px; vertical-align:middle; margin-right:5px;">
+          6204861961
+        </a>
+      </p>
+      <p>
+        📧 Email: <a href="mailto:ashutosh123459295@gmail.com" class="text-decoration-none">ashutosh123459295@gmail.com</a>
+      </p>
+      <p>📍 Location: Three Jewels, Kondhwa Budruk, Pune, Maharashtra 411048</p>
+      <div class="row justify-content-center mt-4">
+        <div class="col-12 col-md-8">
+          <div class="ratio ratio-16x9">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1892.469454060447!2d73.8821027884991!3d18.44108274013767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2eafe74cc5f91%3A0x8ef3534206a35f3d!2sTHREE%20JEWELS%2C%20Kondhwa%20Budruk%2C%20Pune%2C%20Maharashtra%20411048!5e0!3m2!1sen!2sin!4v1746563112000!5m2!1sen!2sin"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-navy text-white text-center py-3">
+    <p class="mb-0">&copy; 2025 Singh Firm. All rights reserved.</p>
+  </footer>
+
+  <a href="https://wa.me/6204861961?text=Hello%2C%20I%27m%20interested%20in%20your%20legal%20services.%20Could%20you%20help%20me%20with%20a%20consultation%3F"
+     class="whatsapp-float" title="Chat on WhatsApp" target="_blank">
+    <img src="whatsapp-icon.png" alt="WhatsApp Chat" style="height:50px; width:50px;">
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    (function(){
+      if(!window.chatbase || window.chatbase("getState") !== "initialized"){
+        window.chatbase = (...arguments) => {
+          if(!window.chatbase.q){ window.chatbase.q = [] }
+          window.chatbase.q.push(arguments)
+        };
+        window.chatbase = new Proxy(window.chatbase, {
+          get(target, prop){
+            if(prop === "q"){ return target.q }
+            return (...args) => target(prop, ...args)
+          }
+        })
+      }
+      const onLoad = function(){
+        const script = document.createElement("script");
+        script.src = "https://www.chatbase.co/embed.min.js";
+        script.id = "51RO6GBBwyVSBb-5MR7ky";
+        script.domain = "www.chatbase.co";
+        document.body.appendChild(script);
+      };
+      if(document.readyState === "complete"){ onLoad() }
+      else { window.addEventListener("load", onLoad) }
+    })();
+  </script>
+</body>
+</html>
