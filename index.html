@@ -104,20 +104,6 @@
     .nav-link.nav-booking:hover {
       color: #e0a800 !important;
     }
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 1000;
-      background-color: white;
-      border-radius: 50%;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      padding: 5px;
-      transition: transform 0.2s ease;
-    }
-    .whatsapp-float:hover {
-      transform: scale(1.1);
-    }
   </style>
 </head>
 <body>
@@ -135,8 +121,8 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-navy">
     <div class="container d-flex align-items-center">
       <a class="d-flex align-items-center text-decoration-none" href="#">
-        <img src="0ec7782316294f9fb52e62fae951c030.png" alt="Logo"
-             style="height:50px; width:auto; margin-right:0.75rem; object-fit:contain;">
+        <img src="logo.png" alt="Logo"
+             style="height:100px; width:auto50; margin-right:0.75rem; object-fit:contain;">
         <span class="navbar-brand mb-0">Singh Firm</span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -221,46 +207,54 @@
     </div>
   </section>
 
-  <section id="testimonials" class="py-5">
+  <section id="testimonials" class="py-5 bg-white">
     <div class="container">
-      <h2 class="text-center mb-4 text-navy">Testimonials</h2>
-      <div class="row">
-        <div class="col-md-6 mb-4">
-          <div class="card p-3">
-            <p class="card-text">
-              “Singh Firm guided me through a complex legal process with professionalism and achieved an excellent outcome.”
-            </p>
-            <h6 class="text-end mb-0">— Rajesh Sharma, Pune</h6>
+      <h2 class="text-center mb-5 text-navy display-5 fw-bold">Client Experiences</h2>
+      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="6000">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"></button>
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="testimonial-card">
+              <p class="testimonial-text">“Singh Firm guided me through a complex legal process with professionalism and achieved an excellent outcome. Their attention to detail was remarkable.”</p>
+              <h6 class="testimonial-author">— Rajesh Sharma, Pune</h6>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="testimonial-card">
+              <p class="testimonial-text">“Helpful but took a bit longer than I expected. Still, I got the result I needed. Appreciate their persistent follow-ups.”</p>
+              <h6 class="testimonial-author">— Anita Pillai, Mumbai</h6>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="testimonial-card">
+              <p class="testimonial-text">“Great value for the price. I appreciated their clarity and honesty in explaining legal nuances in simple terms.”</p>
+              <h6 class="testimonial-author">— Imran Qureshi, Hyderabad</h6>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="testimonial-card">
+              <p class="testimonial-text">“Not bad. Some communication gaps initially, but the work was completed on time. Would use their services again.”</p>
+              <h6 class="testimonial-author">— Meenal Desai, Ahmedabad</h6>
+            </div>
           </div>
         </div>
-        <div class="col-md-6 mb-4">
-          <div class="card p-3">
-            <p class="card-text">
-              “Helpful but took a bit longer than I expected. Still, I got the result I needed.”
-            </p>
-            <h6 class="text-end mb-0">— Anita Pillai, Mumbai</h6>
-          </div>
-        </div>
-        <div class="col-md-6 mb-4">
-          <div class="card p-3">
-            <p class="card-text">
-              “Great value for the price. I appreciated their clarity and honesty.”
-            </p>
-            <h6 class="text-end mb-0">— Imran Qureshi, Hyderabad</h6>
-          </div>
-        </div>
-        <div class="col-md-6 mb-4">
-          <div class="card p-3">
-            <p class="card-text">
-              “Not bad. Some communication gaps, but the work was completed on time.”
-            </p>
-            <h6 class="text-end mb-0">— Meenal Desai, Ahmedabad</h6>
-          </div>
-        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
     </div>
   </section>
-
+  
   <section id="booking" class="py-5 bg-light">
     <div class="container">
       <h2 class="text-center mb-4 text-navy">Book a Consultation</h2>
@@ -303,7 +297,6 @@
       </form>
     </div>
   </section>
-  
 
   <section id="contact" class="py-5">
     <div class="container text-center">
@@ -338,11 +331,6 @@
   <footer class="bg-navy text-white text-center py-3">
     <p class="mb-0">&copy; 2025 Singh Firm. All rights reserved.</p>
   </footer>
-
-  <a href="https://wa.me/6204861961?text=Hello%2C%20I%27m%20interested%20in%20your%20legal%20services.%20Could%20you%20help%20me%20with%20a%20consultation%3F"
-     class="whatsapp-float" title="Chat on WhatsApp" target="_blank">
-    <img src="whatsapp-icon.png" alt="WhatsApp Chat" style="height:50px; width:50px;">
-  </a>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
   <script>
